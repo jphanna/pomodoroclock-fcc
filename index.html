@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pomodoro Clock for freeCodeCamp</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Text+Me+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="">
+    <div id="app">
+      <header>
+        <h1>Pomodoro Clock for freeCodeCamp</h1>
+      </header>
+      <div id="settings">
+        <p>Session Time</p>
+        <button id="sessMinus" onclick="pClock.setSessionMinutes('-')">-</button><span id="sessMinutes">25</span><button id="sessPlus" onclick="pClock.setSessionMinutes('+')">+</button>
+        <div id="clock">
+          <span id="time"></span><br>
+          <span id="label"></span><br>
+        </div>
+        <button id="breakMinus" onclick="pClock.setBreakMinutes('-')">-</button><span id="breakMinutes">05</span><button id="breakPlus" onclick="pClock.setBreakMinutes('+')">+</button>
+        <p>Break Time</p>
+      </div>
+      <div id="controls">
+        <span id="start">START</span>
+      </div>
+      <progress id="progBar" class="hidden"></progress>
+      <footer>
+        <a href="https://glitch.com/edit/#!/morning-helmet" target="_blank">View my code here</a>
+      </footer>
+    </div>
+    
+    
+    
+    <!-- ADD SOUNDS TO SESSION AND BREAK TIMES -->
+    <audio id="soundSession">
+      <source src="sms-alert-2-daniel_simon.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="soundBreak">
+      <source src="Train%20Horn%20Low-SoundBible.com-1744689113.mp3" type="audio/mpeg">
+    </audio>
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="client.js"></script>
+
+  </body>
+</html>
